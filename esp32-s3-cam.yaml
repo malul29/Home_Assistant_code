@@ -72,9 +72,9 @@ esp32_camera:
   # reset_pin: GPIOXX
   # resolution: 2592x1944
   # resolution: 2560x1920
-  resolution: 1024x768
-  # resolution: 800x600
-  # jpeg_quality: 10
+  # resolution: 1024x768
+  resolution: 800x600
+  jpeg_quality: 10
   vertical_flip: false
   horizontal_mirror: true
   aec_mode: auto
