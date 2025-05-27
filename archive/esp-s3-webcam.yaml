@@ -1,0 +1,32 @@
+esphome:
+  name: esp-s3-webcam
+  friendly_name: ESP-S3-WEBCAM
+
+esp32:
+  board: esp32-s3-devkitc-1
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+  encryption:
+    key: "MNiNqRs5/3UCv+buzM16DKAf5afXB99XsEYrt59uRDY="
+
+ota:
+  - platform: esphome
+    password: "baa6a779e8be134f594b368bd062eb95"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "Esp-S3-Webcam Fallback Hotspot"
+    password: "zxPrBXQ2ATOy"
+
+captive_portal:
+    
