@@ -1,9 +1,8 @@
 esphome:
-  name: esp32-s3-wake-word
-  friendly_name: ESP32-S3-WAKE-WORD
+  name: esp32-s3-voice-assistant
+  friendly_name: ESP32-S3-VOICE-ASSISTANT
   platformio_options:
     board_build.flash_mode: dio
-    platform: espressif32@6.5.0
 
   on_boot:
     - light.turn_on:
@@ -35,7 +34,7 @@ api:
     key: "cHalL6yxGpTIL8q8miHEsO7qyFS1TCCRi8s0G4AkdM8="
   on_client_connected:
         then:
-          - delay: 50ms
+          - delay: 2s
           - light.turn_off: led_ww
           - micro_wake_word.start:
   on_client_disconnected:
@@ -144,7 +143,7 @@ speaker:
     i2s_audio_id: i2s_speaker
     dac_type: external
     sample_rate: 22050
-    buffer_duration: 500ms   
+    buffer_duration: 150ms   
     i2s_dout_pin: GPIO21  #  DIN Pin of the MAX98357A Audio Amplifier
     channel: mono
 
@@ -189,6 +188,6 @@ binary_sensor:
       mode: INPUT_PULLUP
     name: "Tombol Mute Fisik"
     on_press:
-      - switch.turn_off: mute
-    on_release:
       - switch.turn_on: mute
+    on_release:
+      - switch.turn_off: mute

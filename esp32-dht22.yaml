@@ -13,11 +13,11 @@ logger:
 # Enable Home Assistant API
 api:
   encryption:
-    key: "zDYLuQxJO/lH5QNeMA2AR/ZxiZKGUg3KeovlnQ7b/1s="
+    key: "ZcCKVZQKjQlOTudlqK89tgLtsWTBRKwC30cfeyYUnjU="
 
 ota:
   - platform: esphome
-    password: "070806c3885466a7294f7664e5e888a4"
+    password: "3621e8c8bb25982030101fc2e5213f3e"
 
 wifi:
   ssid: !secret wifi_ssid
@@ -26,10 +26,11 @@ wifi:
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
     ssid: "Esp32-Dht22 Fallback Hotspot"
-    password: "Hy49jFkc5JUA"
+    password: "pwkjJjbakEnI"
 
 captive_portal:
 
+# Sensor DHT22
 sensor:
   - platform: dht
     pin: GPIO32
