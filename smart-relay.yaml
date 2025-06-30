@@ -1,5 +1,5 @@
 esphome:
-  name: esp32-relay
+  name: "smart-relay"
   friendly_name: ESP32-RELAY
 
 esp32:
